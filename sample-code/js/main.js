@@ -170,7 +170,7 @@ var getHistoricalCount = function (alertColor) {
   $.ajax({
     //  Request
     url: serverApiBaseUrl + "get_location_historical_occupancy_counts",
-    data: '{"day_span": ' + 1 + "}", //  Sets the span of days to return hitorical data for
+    data: '{"day_span": ' + 1 + "}", //  Sets the span of days to return historical data for
     type: "POST",
     //  Request header with authentication tokens
     beforeSend: function (xhr) {
