@@ -44,47 +44,47 @@ var forEach = function (array, callback, scope) {
   }
 };
 
-function redrawCountGuages(count) {
-  //  Radial guage offset (-219.99078369140625)
-  var guageOffset = -219.99078369140625;
+function redrawCountGauges(count) {
+  //  Radial gauge offset (-219.99078369140625)
+  var gaugeOffset = -219.99078369140625;
   forEach(document.querySelectorAll(".location-0"), function (index, value) {
     //  If the current occupancy count is above or equal to the max occupancy value
     if (count >= sensor.max_count) {
-      //  Sets the guage fill percentage to full
+      //  Sets the gauge fill percentage to full
       value
         .querySelector(".fill")
         .setAttribute("style", "stroke-dashoffset: " + 0);
-      //  Sets the guage color to red
+      //  Sets the gauge color to red
       value.querySelector(".fill").style.stroke = "#FA5E3E";
       //  Retrieves the historical count and sets the historical chart color to red
       getHistoricalCount("#FA5E3E");
     }
     //  If the current occupancy count is above half of the max occupancy value
     else if (count >= sensor.max_count / 2) {
-      //  Sets the guage fill percentage
+      //  Sets the gauge fill percentage
       value
         .querySelector(".fill")
         .setAttribute(
           "style",
           "stroke-dashoffset: " +
-            ((sensor.max_count - count) / sensor.max_count) * guageOffset
+            ((sensor.max_count - count) / sensor.max_count) * gaugeOffset
         );
-      //  Sets the guage color to yellow
+      //  Sets the gauge color to yellow
       value.querySelector(".fill").style.stroke = "#F29100";
       //  Retrieves the historical count and sets the historical chart color to yellow
       getHistoricalCount("#F29100");
     }
     //  If the current occupancy count is below half the max occupancy value
     else {
-      //  Sets the guage fill percentage
+      //  Sets the gauge fill percentage
       value
         .querySelector(".fill")
         .setAttribute(
           "style",
           "stroke-dashoffset: " +
-            ((sensor.max_count - count) / sensor.max_count) * guageOffset
+            ((sensor.max_count - count) / sensor.max_count) * gaugeOffset
         );
-      //  Sets the guage color to green
+      //  Sets the gauge color to green
       value.querySelector(".fill").style.stroke = "#56BF6B";
       //  Retrieves the historical count and sets the historical chart color to green
       getHistoricalCount("#56BF6B");
@@ -117,13 +117,13 @@ var getRealtimeCount = function () {
         response.occupancy_count_flooring_enabled &&
         response["occupancy_count"] - response["floor_occupancy_count"] > 0
       ) {
-        redrawCountGuages(
+        redrawCountGauges(
           response["occupancy_count"] - response["floor_occupancy_count"]
         );
       } else if (response["occupancy_count"] > 0) {
-        redrawCountGuages(response["occupancy_count"]);
+        redrawCountGauges(response["occupancy_count"]);
       } else {
-        redrawCountGuages(0);
+        redrawCountGauges(0);
       }
     },
   });
