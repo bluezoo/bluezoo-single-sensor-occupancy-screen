@@ -54,9 +54,9 @@ body {
   cursor: default;
 }
 
-/* Count Guage */
+/* Count Gauge */
 
-.count-guage {
+.count-gauge {
   width: 40em;
   height: 32em;
   display: block;
@@ -65,24 +65,24 @@ body {
   box-shadow: none;
 }
 
-.count-guage .track, .count-guage .fill {
+.count-gauge .track, .count-gauge .fill {
   fill: rgba(0, 0, 0, 0);
   stroke-width: 10;
   transform: rotate(90deg) translate(0px, -120px);
 }
 
-.count-guage .track {
+.count-gauge .track {
   stroke: #bac4cb;
 }
 
-.count-guage .fill {
+.count-gauge .fill {
   stroke: #222;
   stroke-dasharray: 219.99078369140625;
   stroke-dashoffset: -219.99078369140625;
   transition: stroke-dashoffset 1s;
 }
 
-.count-guage .count-value {
+.count-gauge .count-value {
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 2em;
@@ -90,7 +90,7 @@ body {
   text-anchor: middle;
 }
 
-.count-guage .limit-text {
+.count-gauge .limit-text {
   fill: #607183;
   text-anchor: middle;
 }
