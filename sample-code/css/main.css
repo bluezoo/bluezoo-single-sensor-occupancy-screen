@@ -19,12 +19,12 @@ body {
   background: #ebf0f2;
 }
 
-#bluefox-icon {
+#bluezoo-icon {
   z-index: 2;
   position: absolute;
-  top: 2%;
+  bottom: 2%;
   right: 1.5%;
-  width: 4em;
+  width: 24em;
 }
 
 #title-container {
@@ -98,30 +98,6 @@ body {
 .count-gauge .location-name {
   text-anchor: middle;
   font-weight: bold;
-}
-
-/* Historical Chart */
-
-#historical-chart {
-  position: relative;
-  right: 1.5%;
-  margin: 3em 0 1em 0;
-}
-
-.dygraph-axis-label {
-  color: #222;
-  font-family: Montserrat;
-}
-
-.dygraph-label {
-  font-size: 20px;
-  color: #222;
-  font-family: Montserrat;
-}
-
-.dygraph-legend {
-  float: left;
-  margin-left: 7%;
 }
 
 /* Media Queries */

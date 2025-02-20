@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>BlueFox - Single Sensor Occupancy Screen</title>
+        <title>BlueZoo - Single Sensor Occupancy Screen</title>
         <meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -11,32 +11,30 @@
 		<script src="js/vendor/smooth-fill-plotter.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/main.css">
-		<link rel="shortcut icon" type="image/jpg" href="img/bluefox-icon-gray.svg"/>
+		<link rel="shortcut icon" type="image/jpg" href="img/bz_logo_horiz.svg"/>
     </head>
     <body>
 		<div id="loading-screen"></div>
 		<div class="container-fluid">
-			<img src="img/bluefox-icon-gray.svg" alt="bluefox-icon" id="bluefox-icon">
+
 			<div id="title-container">
-				<h2>Current occupancy</h2>
+				<h2>Real-time Occupancy</h2>
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					<svg class="count-gauge location-0 no-select" data-progress="22" x="0px" y="0px" viewBox="0 0 160 80">
 					<path class="track" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" />
 					<path class="fill" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" />
-					<text class="location-name" x="50%" y="-15%">Location Name</text>
+					<text class="location-name" x="50%" y="-15%">Sensor location name</text>
 					<text class="count-value" x="50%" y="62%">0</text>
-					<text class="limit-text" x="50%" y="125%">Limit</text>
+					<text class="limit-text" x="50%" y="125%">Occupancy limit</text>
 					</svg>
 				</div>
 			</div>
 			<div class="row">
-				<h4 class="alert-message">To maintain social distancing, we're currently required to run at less than full capacity.</h4>
+				<div id="historical-chart" style="width: 99%; height: 14em;"></div>
 			</div>
-			<div class="row">
-				<div id="historical-chart" style="width: 99%; height: 14em;"></div> 
-			</div>
+			<img src="img/bz_logo_horiz.svg" alt="bluezoo-icon" id="bluezoo-icon">
 		</div>
 		<script src="js/main.js"></script>
     </body>
